@@ -177,11 +177,10 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-// curl -X POST \
-//   -H "Content-Type: application/json" \
-//   -d '{"item_id": 1, "rating":4}' \
-//   http://localhost:8080/items/rate
-
+// curl post request for authorize
 // curl -X POST -H "Authorization: Bearer {TOKEN}" -H "Content-Type: application/json" -d '{"Username": "Sala", "password": "123"}' http://localhost:8080/authorize
 
+// curl post request for register
 // curl -X POST -H "Content-Type: application/json" -d '{ "Username": "Sala", "Password": "123"}' http://localhost:8080/register
+
+// others by url
