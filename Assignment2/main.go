@@ -160,8 +160,8 @@ func main() {
 	}
 
 	system := &System{Database: database}
-	// fs := http.FileServer(http.Dir("static"))
-	// http.Handle("/", fs)
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/", fs)
 
 	// http.HandleFunc("/after", func(w http.ResponseWriter, r *http.Request) {
 	// 	name := r.FormValue("username")
@@ -178,7 +178,7 @@ func main() {
 }
 
 // curl post request for authorize
-// curl -X POST -H "Authorization: Bearer {TOKEN}" -H "Content-Type: application/json" -d '{"Username": "Sala", "password": "123"}' http://localhost:8080/authorize
+// curl -X POST -H "Authorization: Bearer {TOKEN}" -H "Content-Type: application/json" -d '{"Username": "john", "password": "password123"}' http://localhost:8080/authorize
 
 // curl post request for register
 // curl -X POST -H "Content-Type: application/json" -d '{ "Username": "Sala", "Password": "123"}' http://localhost:8080/register
